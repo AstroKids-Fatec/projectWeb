@@ -1,0 +1,196 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at 20% 20%, #2e005e, #110022);
+  color: #f4f0ff;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.18;
+  animation: starsMove 60s linear infinite;
+  z-index: -1;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  align-items: center;
+  transition: all 0.9s ease-in-out;
+}
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px Rgba(0, 0, 0, 0.2);
+  border: 1.5px solid #6c38ff;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: white;
+  background: radial-gradient(circle, #6c38ff, #000);
+  border: 1.5px solid rgba(255, 255, 255, 0.433);
+}
+
+.flip-card-front {
+  background-color: rgb(245, 244, 249);
+  color: black;
+}
+
+.card-image {
+  width: 260px;
+  height: 250px;
+  object-fit: cover;
+  padding: 10px;
+}
+
+/* container dos flips- bloco geral dos flip cars */
+
+.container-flip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+  justify-content: center;
+  margin: 30px auto;
+  margin-left: 10%;
+}
+
+/*ajustes para diferentes tamanhos de telas( ajustando os flips) : */
+@media screen and (max-width: 1275px) {
+  .container-flip {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 85px;
+    gap: 5px;
+  }
+  .flip-card {
+    width: 80%;
+    height: 450px;
+    justify-content: center;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+  .card-image {
+    width: 85%;
+    height: 65%;
+    object-fit: cover;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .container-flip {
+    grid-template-columns: 1fr;
+    margin: 10px;
+    width: 90%;
+    margin-left: 20%;
+    margin-right: 120px;
+  }
+  .card-image {
+    width: 85%;
+    height: 65%;
+    object-fit: cover;
+    padding: 0;
+  }
+  .flip-card-inner {
+    margin: 2px;
+  }
+}
+@media screen and (max-width: 724px) {
+  .container-flip {
+    padding-right: 20%;
+  }
+  .card-image {
+    padding: 0px;
+  }
+  .flip-card-inner {
+    padding: 2px;
+  }
+}
+
+@media screen and(max-width:460px) {
+  .container-flip {
+    padding: 300px;
+    width: 100%;
+    margin: 550px auto;
+    display: contents;
+    object-fit: contain;
+    padding-right: 30px;
+  }
+
+  .flip-card {
+    width: 100%;
+
+    body {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .card-image {
+    width: 100%;
+    height: 63%;
+    object-fit: cover;
+    padding: 0px;
+  }
+  .flip-card-inner {
+    margin: 2px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .card-image {
+    width: 100%;
+    height: 52.5%;
+    object-fit: cover;
+    padding: 0px;
+  }
+}
