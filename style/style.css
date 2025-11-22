@@ -1,13 +1,11 @@
-
 body {
   font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at 20% 20%, #2E005E, #110022);
-  color: #F4F0FF;
+  background: radial-gradient(circle at 20% 20%, #2e005e, #110022);
+  color: #f4f0ff;
   margin: 0;
   overflow-x: hidden;
   position: relative;
 }
-
 
 body::before {
   content: "";
@@ -24,17 +22,20 @@ body::before {
 }
 
 @keyframes starsMove {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50px); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
 }
 
-
 .astro-header {
-  background: linear-gradient(135deg, #A06BFF, #6B2CD3);
+  background: linear-gradient(135deg, #a06bff, #6b2cd3);
   color: white;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .astro-logo {
@@ -45,7 +46,7 @@ body::before {
 .astro-title {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #F4F0FF;
+  color: #f4f0ff;
 }
 
 .astro-subtitle {
@@ -53,20 +54,19 @@ body::before {
   opacity: 0.9;
 }
 
-
 .astro-navbar {
-  background-color: #6B2CD3;
-  border-bottom: 3px solid #A06BFF;
+  background-color: #6b2cd3;
+  border-bottom: 3px solid #a06bff;
 }
 
 .navbar-nav .nav-link {
-  color: #F4F0FF !important;
+  color: #f4f0ff !important;
   font-weight: 500;
   transition: 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #A06BFF !important;
+  color: #a06bff !important;
   transform: scale(1.08);
 }
 
@@ -78,36 +78,31 @@ body::before {
   margin-bottom: 4rem;
 }
 
-
 .curiosidades .card {
-  background: linear-gradient(145deg, #A06BFF, #6B2CD3);
+  background: linear-gradient(145deg, #a06bff, #6b2cd3);
   border-radius: 22px;
   backdrop-filter: blur(4px);
   transition: 0.3s;
-  border: 2px solid #F4F0FF;
-  box-shadow: 
-      0 0 12px rgba(160, 107, 255, 0.7),
-      0 0 24px rgba(160, 107, 255, 0.4);
+  border: 2px solid #f4f0ff;
+  box-shadow: 0 0 12px rgba(160, 107, 255, 0.7),
+    0 0 24px rgba(160, 107, 255, 0.4);
   color: white;
 }
 
 .curiosidades .card:hover {
   transform: translateY(-8px) scale(1.03);
-  background: linear-gradient(145deg, #B88BFF, #7C3DDF);
-  box-shadow:
-      0 0 20px rgba(255, 255, 255, 0.6),
-      0 0 45px rgba(160, 107, 255, 0.5);
+  background: linear-gradient(145deg, #b88bff, #7c3ddf);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 45px rgba(160, 107, 255, 0.5);
 }
-
 
 .curiosidade-img {
   width: 110px;
 }
 
-
 .astro-footer {
-  background: #2E005E;
-  border-top: 3px solid #A06BFF;
-  color: #F4F0FF;
+  background: #2e005e;
+  border-top: 3px solid #a06bff;
+  color: #f4f0ff;
   font-size: 0.9rem;
 }
